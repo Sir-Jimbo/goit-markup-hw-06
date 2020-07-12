@@ -45,7 +45,54 @@
         <section class="banner">
             <div class="overlay">
                 <h1 class="banner-title">Эффективные решения для вашего бизнеса</h1>
-                <a href="" class="button text">Заказать услугу</a>
+                <button type="button" class="button text" data-modal-open>Заказать услугу</button>
+            </div>
+            <div class="backdrop item" data-modal>
+                <div class="modal">
+                    <form class="form">
+                        <div class="form-title">Оставьте свои данные, мы вам перезвоним</div>
+                        <div class="form-field">
+                            <input class="form-input" type="text" name="name" id="name" placeholder=" ">
+                            <label class="form-label" for="name">Имя</label>
+                            <svg class="icon-input">
+                                <use href="./images/sprite.svg#icon-person-black"></use>
+                            </svg>
+                        </div>
+                        <div class="form-field">
+                            <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">
+                            <label class="form-label" for="tel">Телефон</label>
+                            <svg class="icon-input">
+                                <use href="./images/sprite.svg#icon-phone-black"></use>
+                            </svg>
+                        </div>
+                        <div class="form-field">
+                            <input class="form-input" type="email" name="mail" id="mail" placeholder=" ">
+                            <label class="form-label" for="mail">Почта</label>
+                            <svg class="icon-input">
+                                <use href="./images/sprite.svg#icon-email-black"></use>
+                            </svg>
+                        </div>
+                        <div class="form-field">
+                            <textarea class="form-comment" name="comment" id="comment" rows="8"
+                                placeholder=" "></textarea>
+                            <label class="form-label-comment" for="comment">Комментарий</label>
+                        </div>
+                        <div class="form-field align">
+                            <input class="checkbox" type="checkbox" name="policy" id="policy">
+                            <label class="label-checkbox" for="policy">Соглашаюсь с рассылкой и принимаю <a href="/"
+                                    target="_blank" class="checkbox-link"> Условия
+                                    договора</a></label>
+                        </div>
+                        <button type="submit" class="btn-submit">Отправить</button>
+
+                        <button type="button" class="btn-close" data-modal-close>
+                            <svg class="icon-close-black">
+                                <use href="./images/sprite.svg#icon-close-black"></use>
+                            </svg>
+                            </a>
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
         <!--Блок с преимуществами-->
@@ -372,16 +419,22 @@
                 <!--Правая часть футера-->
                 <div class="right">
                     <p class="footer-title">Подпишитесь на рассылку</p>
-                    <button class="button">Подписаться
-                        <svg class="icon-button">
-                            <use href="./images/sprite.svg#icon-button"></use>
-                        </svg>
-                    </button>
+                    <form class="form-footer">
+                        <div class="form-footer-field">
+                            <input class="form-footer-input" type="text" name="name" id="name" placeholder="E-mail">
+                            <label class="form-footer-label" for="name"></label>
+                        </div>
+                        <button type="submit" class="button">Подписаться
+                            <svg class="icon-button">
+                                <use href="./images/sprite.svg#icon-button"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
-
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
